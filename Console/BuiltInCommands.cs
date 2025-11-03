@@ -11,7 +11,7 @@ namespace DevTools.Console
 		public static UnityEvent OnConsoleCleared = new UnityEvent();
 
 		[Command("clear", Description = "Clears the console output")]
-		private void ClearConsole()
+		private static void ClearConsole()
 		{
 			OnConsoleCleared?.Invoke();
 		}
