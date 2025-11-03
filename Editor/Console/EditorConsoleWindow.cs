@@ -76,7 +76,7 @@ namespace DevTools
 				_executor = new CommandExecutor();
 				_allCommands = new List<string>(_executor.GetAvailableCommands());
 
-				ExampleCommands.OnConsoleCleared.AddListener(ClearLogs);
+				BuiltInCommands.OnConsoleCleared.AddListener(ClearLogs);
 			}
 			
 			private void ExecuteCommand()
