@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "displayName": "Dev Tools",
   "description": "This is an package that contains development tools, to help speed up development process",
-  "unity": "6000.2.7f2f",
+  "unity": "6.0",
 
   "author": {
     "name": "Lucas Muzza",
