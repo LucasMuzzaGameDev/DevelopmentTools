@@ -1,0 +1,12 @@
+{
+  "name": "com.lucasmuzza.devtools",
+  "version": "1.0.0",
+  "displayName": "Dev Tools",
+  "description": "This is an package that contains development tools, to help speed up development process",
+  "unity": "6000.2.7f2f",
+
+  "author": {
+    "name": "Lucas Muzza",
+    "url": "https://github.com/LucasMuzzaGameDev"
+  }
+}
