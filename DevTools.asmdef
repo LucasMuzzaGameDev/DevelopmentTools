@@ -1,11 +1,7 @@
 {
     "name": "DevTools",
     "rootNamespace": "DevTools",
-    "references": [
-        "Unity.InputSystem",
-        "UnityEngine.UIElementsModule",
-        "UnityEngine.UIElementsNativeModule"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
