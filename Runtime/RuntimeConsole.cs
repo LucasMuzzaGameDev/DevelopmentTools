@@ -1,3 +1,4 @@
+using System.Runtime.Versioning;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
@@ -11,17 +12,35 @@ namespace DevTools.Console
 		[SerializeField] private bool _isConsoleOpen;
 
 		private ConsoleView _view;
-		private ConsoleModel consoleModel;
+		private ConsoleModel _consoleModel;
 
 		private VisualElement _rootVisualElement;
 		private VisualElement _consoleView;
 		private VisualElement _consoleHeader;
 		private TextField _textField;
+		
+		private VisualTreeAsset _consoleUXML;
+		private StyleSheet _styleSheet;
+		private PanelSettings _panelSettings;
 
 
 		private void Awake()
 		{
 			var doc = GetComponent<UIDocument>();
+
+			// Load assets from Resources (inside package)
+			if (_consoleUXML == null) _consoleUXML = Resources.Load<VisualTreeAsset>("ConsoleUIDoc");
+			if (_styleSheet == null) _styleSheet = Resources.Load<StyleSheet>("ConsoleUIStyleSheet");
+			if (_panelSettings == null) _panelSettings = Resources.Load<PanelSettings>("ConsolePanelSettings");
+
+			if (_consoleUXML == null)
+				Debug.LogError("Could not load ConsolePanel UXML from Resources!");
+			if (_panelSettings == null)
+				Debug.LogError("Could not load ConsolePanelSettings from Resources!");
+
+			// Assign the VisualTreeAsset to the UIDocument
+			doc.visualTreeAsset = _consoleUXML;
+
 			_rootVisualElement = doc.rootVisualElement;
 
 			_consoleView = _rootVisualElement.Q<VisualElement>("consoleView");
@@ -31,20 +50,12 @@ namespace DevTools.Console
 			_consoleHeader.style.display = DisplayStyle.None;
 
 			_textField = _consoleView.Q<TextField>("textField");
-			
-			if (ConsoleModel.Instance == null)
-			{
-				consoleModel = new ConsoleModel();
-			}
-			
-			else
-			{
-				consoleModel = ConsoleModel.Instance;
-			}
-			
+
+			_consoleModel = ConsoleModel.Instance ?? new ConsoleModel();
+
 			_view = new ConsoleView();
 			_view.Initialize(_rootVisualElement);
-			
+
 			_view.InitializeResize();
 			_view.RegisterDragEvents();
 			_view.RegisterResizeEvents();
