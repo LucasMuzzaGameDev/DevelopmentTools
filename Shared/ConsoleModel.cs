@@ -40,7 +40,7 @@ namespace DevTools.Console
 		{
 			Application.logMessageReceived += HandleUnityLog;
 			
-			BuiltInCommands.OnConsoleCleared.AddListener(Clear);
+			ConsoleCommands.OnConsoleCleared.AddListener(Clear);
 
 			_executor = new CommandExecutor();
 			_availableCommands = _executor.GetAvailableCommands().ToList();

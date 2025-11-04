@@ -1,3 +1,5 @@
+@import url("UnityDefaultRuntimeTheme.tss");
 
 @import url("ConsoleUIStyleSheet.uss");
+
 VisualElement {}
