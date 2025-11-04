@@ -1,6 +1,6 @@
 {
     "name": "DevTools",
-    "rootNamespace": "DevTools",
+    "rootNamespace": "DevTools.Console",
     "references": [
         "Unity.InputSystem",
         "UnityEngine.UIElementsModule",
