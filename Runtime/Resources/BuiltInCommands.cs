@@ -4,16 +4,19 @@ using UnityEngine.Events;
 
 
 
-namespace DevTools.Console
+namespace DevTools
 {
-	public class BuiltInCommands : MonoBehaviour
-	{
-		public static UnityEvent OnConsoleCleared = new UnityEvent();
-
-		[Command("clear", Description = "Clears the console output")]
-		private static void ClearConsole()
+	namespace Console
+    {
+        public class BuiltInCommands : MonoBehaviour
 		{
-			OnConsoleCleared?.Invoke();
+			public static UnityEvent OnConsoleCleared = new UnityEvent();
+
+			[Command("clear", Description = "Clears the console output")]
+			private static void ClearConsole()
+			{
+				OnConsoleCleared?.Invoke();
+			}
 		}
-	}
+    }
 }
