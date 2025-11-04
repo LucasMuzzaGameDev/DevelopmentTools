@@ -17,7 +17,7 @@
     color: rgb(255, 255, 255);
     font-size: 20px;
     -unity-font-style: bold;
-    -unity-font-definition: url("project://database/Assets/DevTools/Editor/Console/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
+    -unity-font-definition: url("project://database/Assets/DevTools/Runtime/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
 }
 
 .console-view {
@@ -52,7 +52,7 @@
 }
 
 #textField #unity-text-input > TextElement {
-    -unity-font-definition: url("project://database/Assets/DevTools/Editor/Console/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
+    -unity-font-definition: url("project://database/Assets/DevTools/Runtime/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
     margin: 0;
     padding: 5px;
     font-size: 14px;
@@ -67,7 +67,7 @@
 }
 
 .consoleOutputLabel {
-    -unity-font-definition: url("project://database/Assets/DevTools/Editor/Console/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
+    -unity-font-definition: url("project://database/Assets/DevTools/Runtime/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular"); 
     font-size: 14px;
     padding: 2px 5px;
 }
@@ -94,7 +94,7 @@
     align-content: flex-end;
     color: rgb(255, 255, 255);
     font-size: 21px;
-    -unity-font-definition: url("project://database/Assets/DevTools/Editor/Console/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
+    -unity-font-definition: url("project://database/Assets/DevTools/Runtime/Fonts/ShareTech-Regular.ttf?fileID=12800000&guid=31060245f7e25924f8c51bac0e4cc4a5&type=3#ShareTech-Regular");
 }
 
 #suggestionsList > ScrollView {
