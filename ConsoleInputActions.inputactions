@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "ConsoleInputActions",
+    "maps": [
+        {
+            "name": "Console",
+            "id": "9d0611f8-9b54-4a1b-bb4f-45e1227d1136",
+            "actions": [
+                {
+                    "name": "OpenCloseConsole",
+                    "type": "Button",
+                    "id": "3b0abb3e-1dc5-4748-a555-2ba525caf673",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "48d9832e-6f1a-4f3b-80fb-b16bf87e14bb",
+                    "path": "<Keyboard>/leftBracket",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenCloseConsole",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
