@@ -1,11 +1,12 @@
 {
-    "name": "DevToolsRuntime",
+    "name": "DevToolsEditor",
     "rootNamespace": "DevTools.Console",
     "references": [
         "Unity.InputSystem",
         "UnityEngine.UIElementsModule",
         "UnityEngine.UIElementsNativeModule",
-        "DevToolsShared"
+		"DevToolsShared",
+		"DevToolsRuntime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
