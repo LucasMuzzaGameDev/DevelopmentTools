@@ -9,10 +9,10 @@ namespace DevTools
 		public class CommandAttribute : Attribute
 		{
 			public string CommandName { get; }
+			public string Alias { get; set; }
 			public string Description { get; set; }
 			public ConsoleCommandType CommandType { get; set; }
 			public MonoBehaviorTargetType MonoBehaviorTargetType { get; set; }
-			public string Alias { get; set; }
 
 			public CommandAttribute(string commandName = "")
 			{
@@ -26,6 +26,15 @@ namespace DevTools
 				CommandType = commandType;
 			}
 			
+			public CommandAttribute(string commandName, string alias, ConsoleCommandType commandType, MonoBehaviorTargetType monoBehaviorTargetType, string description)
+			{
+				CommandName = commandName;
+				Alias = alias;
+				CommandType = commandType;
+				MonoBehaviorTargetType = monoBehaviorTargetType;
+				Description = description;
+			}
+			
 			public CommandAttribute(string commandName, ConsoleCommandType commandType, MonoBehaviorTargetType monoBehaviorTargetType)
 			{
 				CommandName = commandName;
@@ -37,7 +46,8 @@ namespace DevTools
 		public enum ConsoleCommandType
 		{
 			Runtime,
-			Editor
+			Editor,
+			Runtime_Editor,
 		}
 	}
 }

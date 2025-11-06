@@ -1,6 +1,7 @@
 using System.Reflection;
 using System;
 using System.Linq;
+using System.Data;
 
 namespace DevTools
 {
@@ -15,19 +16,16 @@ namespace DevTools
 			public string Description { get; set; }
 			public string Usage { get; set; }
 			public string Alias { get; set; }
+			public ConsoleCommandType ConsoleCommandType { get; set; }
 			public MonoBehaviorTargetType TargetType { get; set; }
 			public MethodInfo Method { get; set; }
 			public Type DeclaringType { get; set; }
 			public ParameterInfo[] Parameters { get; set; }
-
-			public CommandData()
-			{
-				Parameters = new ParameterInfo[0];
-			}
 			
-			public CommandData(string name, ParameterInfo[] parameters)
+			public CommandData(string name, ConsoleCommandType consoleCommandType, ParameterInfo[] parameters)
 			{
 				Name = name;
+				ConsoleCommandType = consoleCommandType;
 				Parameters = parameters ?? Array.Empty<ParameterInfo>();
 				AnalyzeParameters();
 			}
